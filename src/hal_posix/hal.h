@@ -22,6 +22,10 @@
 /***** Local headers ********************************************************/
 /***** Constant values ******************************************************/
 /***** Macros ***************************************************************/
+
+/* CHARLOTTE ATARI */
+#define MRBC_NO_TIMER
+
 #ifndef MRBC_SCHEDULER_EXIT
 #define MRBC_SCHEDULER_EXIT 1
 #endif
