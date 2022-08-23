@@ -10,7 +10,7 @@
 include hal_selector.mk
 
 TARGET = libmrubyc.a
-CFLAGS += -Wall -Wpointer-arith -g -std=c99 -pedantic -pedantic-errors
+CFLAGS += -Wall -Wpointer-arith -g -std=c99
 SRCS = $(HAL_DIR)/hal.c alloc.c c_array.c c_hash.c c_math.c c_numeric.c \
 	c_object.c c_range.c c_string.c class.c console.c error.c global.c \
 	keyvalue.c load.c mrblib.c rrt0.c symbol.c value.c vm.c
@@ -21,6 +21,7 @@ all: $(TARGET)
 
 $(TARGET): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $?
+	$(STRIP) $@
 
 clean:
 	@rm -f $(TARGET) $(OBJS) *~

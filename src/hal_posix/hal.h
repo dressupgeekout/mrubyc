@@ -96,7 +96,8 @@ inline static int hal_write(int fd, const void *buf, int nbytes)
 */
 inline static int hal_flush(int fd)
 {
-  return fsync(1);
+  //return fsync(1); // XXX CHARLOTTE
+	return 0;
 }
 
 
