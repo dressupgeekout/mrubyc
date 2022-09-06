@@ -13,14 +13,18 @@ main(int argc, char *argv[])
 {
 	mrbc_init(MEMORY_POOL, MEMORY_SIZE);
 
+#if 0
 	uint8_t *mrbbuf = load_mrb_file(argv[1]);
 	if (!mrbbuf) {
 		return EXIT_FAILURE;
 	}
+#endif
 
+#if 0
 	if (!mrb_create_task(mrbbuf, NULL)) {
 		return EXIT_FAILURE;
 	}
+#endif
 
 	int ret = mrbc_run();
 
